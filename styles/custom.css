@@ -1,0 +1,46 @@
+
+.subtitle {
+	font-size: 18px;
+	color: #d7d7d7;
+}
+section {
+	padding-bottom: 25px;
+	border-bottom: 1px solid #CCC;
+}
+form label {
+	width: 150px;
+	display: inline-block;
+}
+form .form-component {
+	padding: 10px 0;
+}
+input[type="file"] {
+     display: inline-block; 
+}
+ul {
+	padding-left: 15px;
+	list-style-type: none;
+}
+header,
+footer {
+	padding-top: 5px 0;
+	background-color: #CCC;
+}
+nav ul li {
+	list-style-type: none;
+	display: inline;
+}
+nav ul li a {
+	padding: 10px 15px;
+}
+.wrapper {
+	padding: 30px 0;
+}
+.media img.media-object {
+	width: 150px;
+	height: 150px;
+}
+/*aside*/
+.sb-widget {
+	padding: 15px;
+}
