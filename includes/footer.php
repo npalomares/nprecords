@@ -8,8 +8,6 @@
 					<li><a href="#" class="flist">Footer Link</a></li>
 					<li><a href="#" class="flist">Footer Link</a></li>
 					<li><a href="#" class="flist">Footer Link</a></li>
-					<li><a href="#" class="flist">Footer Link</a></li>
-					<li><a href="#" class="flist">Footer Link</a></li>
 				</ul>
 			</div>
 
@@ -28,8 +26,6 @@
 			<div class="nav-list col-sm-4">
 				<h3 class="subtitle">Footer List Two</h3>
 				<ul>
-					<li><a href="#" class="flist">Footer Link</a></li>
-					<li><a href="#" class="flist">Footer Link</a></li>
 					<li><a href="#" class="flist">Footer Link</a></li>
 					<li><a href="#" class="flist">Footer Link</a></li>
 					<li><a href="#" class="flist">Footer Link</a></li>
