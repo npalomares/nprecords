@@ -1,5 +1,5 @@
-<?php include('includes/header.php'); ?>
-<?php 
+<?php include('includes/header.php');
+
 	$tableName= "records";
 	$targetpage = "records.php";
 	$limit = 10;
@@ -22,20 +22,39 @@
 					  FROM records
 					  ORDER BY artist ASC"; 
 
-	$records_result = mysql_query($records_query);
+		$records_result = mysql_query($records_query);
+		while( $row_latest = mysql_fetch_array($records_result)) {
+		?>
+		<div class="media">
+			<div class="media-left">
+				<a href="#">
+					<img class="media-object pull-left" src="<?php echo $row_latest['cover_art_link']; ?>" class="img-responsive" />
+				</a>
+			</div>
+			<div class="media-body">
+				<h4 class="media-heading"><span class="record-data"><?php echo $row_latest['artist']; ?></span></h4>
+				<h6 class="media-heading"><strong><span class="record-data"><?php echo $row_latest['title']; ?></span></strong></h6>
+				<p><span class="record-data"><?php echo $row_latest['description']; ?></span></p>
+				<small><span class="record-data"> <?php echo $row_latest['year']; ?></span></small> | <small><span class="record-data"><?php echo $row_latest['record_company']; ?></span></small>
+			</div>
+		</div><!-- close media -->
+	<?php }	?>
+	</section>
 
+	<?php
 	// Initial page num setup
 	if ($page == 0){$page = 1;}
-	$prev = $page - 1;
-	$next = $page + 1;
-	$lastpage = ceil($total_pages/$limit);
-	$LastPagem1 = $lastpage - 1;
+		$prev = $page - 1;
+		$next = $page + 1;
+		$lastpage = ceil($total_pages/$limit);
+		$LastPagem1 = $lastpage - 1;
 
 	$paginate = '';
 	if($lastpage > 1)
 	{
 
 	$paginate .= "<div class='paginate'>";
+	$paginate .= "<div class='container'>";
 
 	// Previous
 	if ($page > 1){
@@ -110,7 +129,8 @@
 	$paginate.= "<span class='disabled'>next</span>";
 	}
 
-	$paginate.= "</div>";
+	$paginate.= "</div>"; // end container
+	$paginate.= "</div>"; // end paginate
 
 	}
 	echo $total_pages.' Results';
